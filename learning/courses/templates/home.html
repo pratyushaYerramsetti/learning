@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <!-- <head>
+        <title>HOME PAGE</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <h1>logged in successful</h1>
+        <a href='{% url "cse" %}'>cse</a>
+    <a href="{% url 'logout' %}">logout</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html> -->
+
+<head>
+    <title>
+        website
+    </title>
+    <style>
+        .a {
+            display:ruby-base;
+            width:5px;
+            padding: 10px 20px;
+            height: 2em;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+        }
+        body {
+            background-color: whitesmoke;
+            background-size: 100% 100%;;
+            text-align: center;
+        }
+        
+        h1 {
+            color:black;
+            text-align: center;
+            padding: 10px;
+        }
+        .button{
+            background-color: burlywood;
+            width: 50%;
+            color: black;
+            border:none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin:4px 0px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: black;
+            color: white;
+        }
+        .button .btn {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #555;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .button .btn:hover { 
+            background-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    {% block content %}
+        <h1>Welcome {{ user.username }} !!!</h1>
+        <h1>Branches</h1>
+
+    <div class='button'>
+        <a href='{% url "it" %}' class = "button2">IT</a>
+        <img src="http://www.genlish.com/learn-english/wp-content/uploads/2017/03/feature-landing_tcm32-288767.jpg" alt="Snow" style="width:100%;height: 100%;">
+        <!-- <button class="button"><i class="fa fa-home"></i></button>
+        <button class="button"><i class="fa fa-home"></i> it</button> -->
+        <!-- <button class="btn">it</button> -->
+
+    </div>
+    <div class='button'>
+        <!-- <a href="cse" class = "button3"></a> -->
+        <img src="" alt="Snow" style="width:100%;height: 100%;">
+        <a href='{% url "cse" %}' class = "button3">cse</a>        
+    </div>
+
+    <div class='button'>
+        <a href="eee" class = 'button4'></a>
+        <img src="http://www.barolatechnologies.com/extra-images/eee1.jpg" alt="Snow" style="width:100%;height: 100%;">
+    </div>
+    <div class='button'>
+        <a href="ece" class = 'button5'></a>
+        <img src="http://gce.org.in/gce/gnanwizard/images/ece.jpg" alt="Snow" style="width:100%;height: 100%;">
+    </div>
+    <div class='button'>
+        <a href="mech" class = 'button6'></a>
+        <img src="" alt="Snow" style="width:100%;height: 100%;">
+    </div>
+    <div class='button'>
+        <a href="civil" class = 'button7'></a>
+        <img src="" alt="Snow" style="width:100%;height: 100%;">
+    </div>
+    <div class='button1'>
+            <!-- <img src="https://previews.123rf.com/images/faysalfarhan/faysalfarhan1206/faysalfarhan120600026/14516146-logout-text-icon-on-glossy-red-round-button.jpg" alt="Snow" width="42"> -->
+        <a href="accounts/logout" class = "button">Logout</a>
+        <!-- <input type="logout" id="search" name="logout" alt="search" > -->
+    </div>
+    {% endblock %} 
+
+</body>
+
+</html>

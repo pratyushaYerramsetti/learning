@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Login to continue{% endblock %}</title>
+  <style>
+    #button {
+        width: 6em;
+        border: 2px solid green;
+        background: #ffe;
+        border-radius: 5px;
+    }
+    a {
+        display: block;
+        width: 100%;
+        line-height: 2em;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Login</h1>
+    <a href = "{% url 'home' %}">home</a>
+    {% if user.is_authenticated %}
+      Hi {{ user.username }}!
+      <div id= 'button'>
+        <a href="{% url 'logout' %}">logout</a>
+      </div>
+      
+    {% else %}
+      <div>
+        <p>you have entered the wrong credentials</p>
+        <a href="{% url 'login' %}">Login again</a>
+      </div>        
+    {% endif %}
+  </header>
+  <hr>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  <hr>
+</body>
+</html>

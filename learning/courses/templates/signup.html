@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <style>
+                button {
+                    width: 6em;
+                    border: 2px solid green;
+                    background:pink;
+                    border-radius: 5px;
+                    padding: 10px 0px 10px 0px;
+                }
+                /* a {
+                    display: block;
+                    width: 100%;
+                    line-height: 2em;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 5px;
+                } */
+                body{
+                    background-color: skyblue;
+                }
+                h2{
+                    text-align: center;
+                    border-bottom: 2px black;
+                }
+                form{
+                    text-align: left;
+                    padding-top: 40px;
+                }
+                
+                
+              </style>
+    </head>
+    <body>
+      
+      {% block content %}
+      <h2>Sign up</h2>
+      <form method="post">
+       {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <input type="email">Mail<br>
+        <input type="text">First Name<br>
+        <input type="text">Last Name<br>
+        <button type="submit">Sign up</button> -->
+      </form>
+      <div class='glit'>
+
+          <a href = 'www.facebook.com'>hello cse</a>
+      </div>
+      {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+    <h1>CSE section</h1>
+    <div>
+            <h1><a href="/home">Back To Home</a></h1>           
+            <!-- <h1>CSE Branch</h1> -->
+        </div>
+        
+        {% for book in books %}
+            <div>
+                <p>published: {{ book.branch }}</p>
+                <h1>{{ book.title }}</h1>
+                <a href="{{ book.description.url }}">{{ book.title }}</a> 
+                <!-- ({{book.author}}) -->
+
+                <!-- <p><a href=''>{{ book.description }}</a></p> -->
+                <p>{{ book.author|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+        
+</body>
+
+</html>
